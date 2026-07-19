@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Practice</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 700px; margin: 40px auto; line-height: 1.5; color: #222; }
+        .highlight { background-color: yellow; }
+        .container { padding: 20px; border: 1px solid #ccc; margin-bottom: 24px; }
+        section { margin-bottom: 24px; padding: 16px; border: 1px dashed #bbb; }
+        section h3 { margin-top: 0; }
+        .error { border-color: #d33 !important; }
+        .error-message { color: #d33; font-size: 0.85em; margin: 4px 0; }
+        #grandparent, #parent, #child { padding: 16px; cursor: pointer; }
+        #grandparent { background: #e0e0e0; }
+        #parent { background: #c8c8c8; }
+        #child { background: #a8a8a8; }
+        .item-list li { display: flex; justify-content: space-between; padding: 6px; }
+        .item-list li.completed { text-decoration: line-through; opacity: 0.6; }
+        .item-list button.delete-btn { color: #d33; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1>DOM Practice</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main class="container">
+        <article>
+            <h2 class="title">Article Title</h2>
+            <p class="content">This is the first paragraph.</p>
+            <p class="content">This is the second paragraph.</p>
+        </article>
+ 
+        <section>
+            <h2>Form Section</h2>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+ 
+        <!-- extra element for the data-attributes exercise -->
+        <section>
+            <h3>Data attribute demo</h3>
+            <div data-id="123" data-category="tech">Sample element with data attributes</div>
+        </section>
+ 
+        <!-- Task 10.1: click counter -->
+        <section id="counter-section">
+            <h3>Click Counter</h3>
+            <p>Count: <span id="count-display">0</span></p>
+            <button id="increment-btn">+</button>
+            <button id="decrement-btn">-</button>
+            <button id="reset-btn">Reset</button>
+        </section>
+ 
+        <!-- Task 10.3: bubbling demo -->
+        <section>
+            <h3>Event Bubbling Demo (open the console, then click "Child")</h3>
+            <div id="grandparent">
+                Grandparent
+                <div id="parent">
+                    Parent
+                    <div id="child">Child</div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Task 10.3: delegated task list -->
+        <section>
+            <h3>Delegated Task List</h3>
+            <input type="text" id="new-item-input" placeholder="New task">
+            <button id="add-item-btn">Add</button>
+            <ul id="delegated-list" class="item-list">
+                <li class="item">Buy groceries <button class="delete-btn">✕</button></li>
+                <li class="item">Walk the dog <button class="delete-btn">✕</button></li>
+                <li class="item">Finish homework <button class="delete-btn">✕</button></li>
+            </ul>
+        </section>
+ 
+        <!-- Task 10.2: keyboard shortcuts demo -->
+        <section>
+            <h3>Keyboard Shortcuts Demo</h3>
+            <p>Try: Ctrl+S (save), Escape (clear inputs on this page), Ctrl+Enter inside the contact form (submit)</p>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>
+ 
+    <script src="dom.js"></script>
+</body>
+</html>
+ 

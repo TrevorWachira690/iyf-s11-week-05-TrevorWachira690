@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 5: Dark Mode Toggle</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            line-height: 1.6;
+            color: #222;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        section { padding: 20px; border: 1px solid #ddd; border-radius: 8px; transition: border-color 0.3s ease; }
+        button { padding: 8px 14px; cursor: pointer; }
+
+        body.dark-mode { background: #1a1a1a; color: #eee; }
+        body.dark-mode section { border-color: #444; }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Day 5: Dark Mode Toggle</h2>
+        <p>Toggles a class on the body element, with an animated transition.</p>
+        <button id="dark-mode-btn">Toggle Dark Mode</button>
+    </section>
+
+    <script src="DarkModetoggle.js"></script>
+</body>
+</html>
